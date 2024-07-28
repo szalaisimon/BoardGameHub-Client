@@ -1,30 +1,17 @@
-import {Component, OnInit} from "@angular/core";
-import { RouterOutlet } from '@angular/router';
-import {User} from "./model/user";
-import {UserService} from "./user/user.service";
-import {HttpClientModule} from "@angular/common/http";
+import {Component} from "@angular/core";
+import {RouterModule, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
+import {NavbarComponent} from "./components/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HttpClientModule, CommonModule],
+  imports: [RouterOutlet, CommonModule,RouterModule,NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  providers: [UserService]
+  styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'BoardGameHub-Client';
 
-  users: User[] = [];
 
-
-  constructor(private userService: UserService) {
-  }
-
-  ngOnInit() {
-    this.userService.findAll().subscribe(data => {
-      this.users = data;
-    });
-  }
 }

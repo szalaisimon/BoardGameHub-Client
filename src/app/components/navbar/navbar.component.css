@@ -1,0 +1,64 @@
+/* A navigációs sor */
+.nav-row {
+  display: flex; /* Flexbox használata a sor elrendezéshez */
+  justify-content: space-around; /* Egyenletes elosztás */
+  align-items: center; /* Középre igazítás függőlegesen */
+  background: rgb(62, 62, 62); /* Szürke háttérszín */
+}
+
+/* A navigációs elemek konténeréhez */
+.navbar-element-container {
+  padding: 14px 20px; /* Párnázás */
+}
+
+/* Az egyes navigációs elemek */
+.navbar-element button {
+  align-items: center;
+  background-color: rgb(244, 229, 193); /* Bézs háttérszín */
+  border: 2px solid rgb(62, 62, 62); /* Szürke szegély */
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(62, 62, 62); /* Szürke szöveg */
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.navbar-element button.navbar-element-active {
+  background-color: rgb(223, 104, 39); /* Narancssárga háttérszín aktív állapotban */
+  outline: 0;
+  color: white;
+}
+
+.navbar-element button.navbar-element-inactive:hover {
+  outline: 0;
+  color: white; /* Fehér szöveg hover esetén */
+}
+
+
+.navbar-element button.navbar-element-inactive:after {
+  background-color: rgb(62, 62, 62); /* Szürke háttérszín */
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}

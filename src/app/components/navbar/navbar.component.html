@@ -1,0 +1,13 @@
+<div class="app-navbar">
+  <div class="nav-row row">
+    <div class="col-md navbar-element-container" *ngFor="let navItem of navItems">
+      <div class="navbar-element" (click)="activateNavElement(navItem)" [routerLink]="navItem.route">
+        <button [ngClass]="{'navbar-element-active': navItem.active, 'navbar-element-inactive': !navItem.active}">
+          {{navItem.title}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+
