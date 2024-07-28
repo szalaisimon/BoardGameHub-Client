@@ -4,13 +4,14 @@ import {ActivatedRoute, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {BoardGameService} from "../../../services/boardgame.service";
 import {BoardGame} from "../../../model/boardGame";
+import {ApplicationPipesModule} from "../../shared/pipe/application-pipes.module";
 
 @Component({
   selector: "boardgamedetail",
   standalone: true,
   templateUrl: "./boardgamedetail.component.html",
   styleUrl: "./boardgamedetail.component.css",
-  imports: [HttpClientModule, RouterOutlet, CommonModule]
+  imports: [HttpClientModule, RouterOutlet, CommonModule, ApplicationPipesModule]
 })
 export class BoardGameDetailComponent implements OnInit {
   boardGameId!: number;
