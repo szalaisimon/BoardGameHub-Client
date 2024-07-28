@@ -1,0 +1,19 @@
+.modal-content {
+  text-align: center;
+  font-size: 1.5rem; /* nagyobb betűméret */
+}
+
+.modal-header, .modal-footer {
+  display: flex;
+  justify-content: center;
+  border: none; /* eltávolítja a fejléc és lábléc határait */
+}
+
+.modal-body {
+  padding: 2rem; /* több hely a modal belsejében */
+}
+
+.modal-backdrop.show {
+  opacity: 0.8; /* homályosabb háttér */
+  background-color: rgba(0, 0, 0, 0.5); /* sötétebb háttér */
+}
