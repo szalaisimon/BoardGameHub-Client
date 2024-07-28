@@ -1,8 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {RouterOutlet} from "@angular/router";
+import {Router, RouterOutlet} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
-import {Boardgame} from "../../../model/boardgame";
 import {BoardGameService} from "../../../services/boardgame.service";
 
 @Component({
@@ -13,14 +12,18 @@ import {BoardGameService} from "../../../services/boardgame.service";
   styleUrl: "./boardgames.component.css"
 })
 export class BoardgamesComponent implements OnInit{
-  boardgames: Boardgame[] = [];
+  boardgames: any = null;
 
-  constructor(private boardGameService: BoardGameService) {
+  constructor(private boardGameService: BoardGameService, private router: Router) {
   }
 
   ngOnInit() {
     this.boardGameService.findAll().subscribe(data => {
       this.boardgames = data;
     });
+  }
+
+  navigateToDetails(boardGameId: number) {
+    this.router.navigate(['/boardgames', boardGameId]);
   }
 }

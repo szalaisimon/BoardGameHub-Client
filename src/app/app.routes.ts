@@ -15,5 +15,9 @@ export const routes: Routes = [
     path: "users",
     pathMatch: "full",
     loadComponent: () => import("./components/navbar/users/users.component").then(m => m.UsersComponent)
+  },
+  {
+    path: "boardgames/:id",
+    loadComponent: () => import("./components/details/boardgame/boardgamedetail.component").then(m => m.BoardGameDetailComponent)
   }
 ];

@@ -14,4 +14,8 @@ export class BoardGameService{
   public findAll(): Observable<Boardgame[]> {
     return this.http.get<Boardgame[]>(`${this.apiServerUrl}/api/boardgames`);
   }
+
+  public findOne(boardGameId: number): Observable<Boardgame> {
+    return this.http.get<Boardgame>(`${this.apiServerUrl}/api/boardgames/`+ boardGameId);
+  }
 }
