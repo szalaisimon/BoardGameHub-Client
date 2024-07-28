@@ -7,7 +7,15 @@ export class User {
   username: string;
   favorite_board_game_id?: string;
 
-  constructor(id: string, firstName: string, lastName: string, password: string, role: string, username: string, favorite_board_game_id?: string) {
+  constructor(
+    id: string,
+    firstName: string,
+    lastName: string,
+    password: string,
+    role: string,
+    username: string,
+    favorite_board_game_id?: string
+  ) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;

@@ -11,7 +11,7 @@ import {BoardGameService} from "../../../services/boardgame.service";
   imports: [RouterOutlet, HttpClientModule, CommonModule],
   styleUrl: "./boardgames.component.css"
 })
-export class BoardgamesComponent implements OnInit{
+export class BoardgamesComponent implements OnInit {
   boardgames: any = null;
 
   constructor(private boardGameService: BoardGameService, private router: Router) {
@@ -24,6 +24,6 @@ export class BoardgamesComponent implements OnInit{
   }
 
   navigateToDetails(boardGameId: number) {
-    this.router.navigate(['/boardgames', boardGameId]);
+    this.router.navigate(["/boardgames", boardGameId]);
   }
 }

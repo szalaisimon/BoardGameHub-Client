@@ -10,6 +10,6 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [RouterOutlet, HttpClientModule, CommonModule],
   styleUrl: "./home.component.css"
 })
-export class HomeComponent{
+export class HomeComponent {
 
 }
