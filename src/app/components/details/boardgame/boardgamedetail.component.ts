@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {HttpClientModule} from "@angular/common/http";
+import {} from "@angular/common/http";
 import {ActivatedRoute, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {BoardGameService} from "../../../services/boardgame.service";
@@ -11,7 +11,7 @@ import {ApplicationPipesModule} from "../../shared/pipe/application-pipes.module
   standalone: true,
   templateUrl: "./boardgamedetail.component.html",
   styleUrl: "./boardgamedetail.component.css",
-  imports: [HttpClientModule, RouterOutlet, CommonModule, ApplicationPipesModule]
+  imports: [RouterOutlet, CommonModule, ApplicationPipesModule]
 })
 export class BoardGameDetailComponent implements OnInit {
   boardGameId!: number;

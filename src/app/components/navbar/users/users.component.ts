@@ -2,7 +2,7 @@ import {User} from "../../../model/user";
 import {UserService} from "../../../services/user.service";
 import {Component, inject, OnInit} from "@angular/core";
 import {RouterOutlet} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
+import {} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {ConfirmationDialogContent} from "../../dialog/confirmation-dialog.component";
@@ -12,7 +12,7 @@ import {ConfirmationDialogContent} from "../../dialog/confirmation-dialog.compon
   selector: "users",
   standalone: true,
   templateUrl: "./users.component.html",
-  imports: [RouterOutlet, HttpClientModule, CommonModule],
+  imports: [RouterOutlet, CommonModule],
   styleUrl: "./users.component.css"
 })
 export class UsersComponent implements OnInit{

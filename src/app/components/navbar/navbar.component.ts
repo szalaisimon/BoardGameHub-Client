@@ -2,13 +2,12 @@ import {Component} from "@angular/core";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {UserService} from "../../services/user.service";
-import {HttpClientModule} from "@angular/common/http";
 import {BoardGameService} from "../../services/boardgame.service";
 
 @Component({
   selector: "app-header",
   standalone: true,
-  imports: [RouterLink, CommonModule, RouterOutlet, HttpClientModule],
+  imports: [RouterLink, CommonModule, RouterOutlet],
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.css"],
   providers: [UserService, BoardGameService]

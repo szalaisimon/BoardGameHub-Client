@@ -1,14 +1,14 @@
 import {Component, OnInit} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {Router, RouterOutlet} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
+import {} from "@angular/common/http";
 import {BoardGameService} from "../../../services/boardgame.service";
 
 @Component({
   selector: "boardgames",
   standalone: true,
   templateUrl: "./boardgames.component.html",
-  imports: [RouterOutlet, HttpClientModule, CommonModule],
+  imports: [RouterOutlet, CommonModule],
   styleUrl: "./boardgames.component.css"
 })
 export class BoardgamesComponent implements OnInit {
