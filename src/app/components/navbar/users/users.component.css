@@ -1,0 +1,48 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.user-table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.user-table th,
+.user-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.user-table td {
+  height: 50px;
+}
+
+.user-table th {
+  height: 50px;
+  font-weight: bold;
+  color: rgb(223 104 39);
+}
+
+.delete-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  border: 2px solid rgb(231, 50, 50);
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 4px #111;
+  transition: .3s;
+}
+
+

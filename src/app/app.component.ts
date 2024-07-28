@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, NgModule} from "@angular/core";
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {NavbarComponent} from "./components/navbar/navbar.component";
@@ -13,5 +13,4 @@ import {ApplicationPipesModule} from "./components/shared/pipe/application-pipes
 })
 export class AppComponent {
   title = "BoardGameHub-Client";
-
 }

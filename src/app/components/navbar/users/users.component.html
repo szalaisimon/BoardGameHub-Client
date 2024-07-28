@@ -1,3 +1,16 @@
-<div *ngFor="let user of users">
-  <div>{{user.firstName}}</div>
+<div class="table-container">
+  <table class="user-table">
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Options</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{user.username}}</td>
+      <td>{{user.firstName}} {{user.lastName}}</td>
+      <td>{{user.role}}</td>
+      <td><img src="assets/icons/deleteIcon.svg" alt="deleteIcon" *ngIf="user.role !== 'ADMIN'" class="delete-icon" (click)="open()"></td>
+    </tr>
+  </table>
 </div>
