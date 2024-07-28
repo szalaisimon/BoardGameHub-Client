@@ -3,7 +3,7 @@
   display: flex; /* Flexbox használata a sor elrendezéshez */
   justify-content: space-around; /* Egyenletes elosztás */
   align-items: center; /* Középre igazítás függőlegesen */
-  background: rgb(62, 62, 62); /* Szürke háttérszín */
+  border-bottom: 10px solid rgb(223, 104, 39);;
 }
 
 /* A navigációs elemek konténeréhez */
@@ -44,21 +44,6 @@
 
 .navbar-element button.navbar-element-inactive:hover {
   outline: 0;
-  color: white; /* Fehér szöveg hover esetén */
+  color: rgb(223, 104, 39); /* Fehér szöveg hover esetén */
 }
 
-
-.navbar-element button.navbar-element-inactive:after {
-  background-color: rgb(62, 62, 62); /* Szürke háttérszín */
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}

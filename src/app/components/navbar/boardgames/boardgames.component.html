@@ -1,0 +1,16 @@
+<div class="table-container">
+  <table class="board-game-table">
+    <tr>
+      <th>Rank</th>
+      <th>Rating</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let boardGame of boardGames">
+      <td>{{boardGame.id}}</td>
+      <td>{{boardGame.rating}}</td>
+      <td (click)="navigateToDetails(boardGame.id)" class="board-game-name">{{boardGame.name}}</td>
+      <td>{{boardGame.description}}</td>
+    </tr>
+  </table>
+</div>

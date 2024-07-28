@@ -7,11 +7,11 @@ import {BoardGameService} from "../../../services/boardgame.service";
 @Component({
   selector: "boardgames",
   standalone: true,
-  templateUrl: "./board-games.component.html",
+  templateUrl: "./boardgames.component.html",
   imports: [RouterOutlet, HttpClientModule, CommonModule],
   styleUrl: "./boardgames.component.css"
 })
-export class BoardGamesComponent implements OnInit {
+export class BoardgamesComponent implements OnInit {
   boardGames: any = null;
 
   constructor(private boardGameService: BoardGameService, private router: Router) {

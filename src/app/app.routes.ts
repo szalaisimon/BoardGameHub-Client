@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: "boardgames",
     pathMatch: "full",
-    loadComponent: () => import("./components/navbar/boardgames/board-games.component").then(m => m.BoardGamesComponent)
+    loadComponent: () => import("./components/navbar/boardgames/boardgames.component").then(m => m.BoardgamesComponent)
   },
   {
     path: "users",
