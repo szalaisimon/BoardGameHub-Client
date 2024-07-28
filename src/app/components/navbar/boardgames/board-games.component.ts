@@ -7,19 +7,19 @@ import {BoardGameService} from "../../../services/boardgame.service";
 @Component({
   selector: "boardgames",
   standalone: true,
-  templateUrl: "./boardgames.component.html",
+  templateUrl: "./board-games.component.html",
   imports: [RouterOutlet, HttpClientModule, CommonModule],
   styleUrl: "./boardgames.component.css"
 })
-export class BoardgamesComponent implements OnInit {
-  boardgames: any = null;
+export class BoardGamesComponent implements OnInit {
+  boardGames: any = null;
 
   constructor(private boardGameService: BoardGameService, private router: Router) {
   }
 
   ngOnInit() {
     this.boardGameService.findAll().subscribe(data => {
-      this.boardgames = data;
+      this.boardGames = data;
     });
   }
 

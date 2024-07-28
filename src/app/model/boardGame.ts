@@ -1,4 +1,4 @@
-export class Boardgame {
+export class BoardGame {
   id: string;
   category: string;
   description: string;

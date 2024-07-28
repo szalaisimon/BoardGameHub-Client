@@ -3,7 +3,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {ActivatedRoute, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {BoardGameService} from "../../../services/boardgame.service";
-import {Boardgame} from "../../../model/boardgame";
+import {BoardGame} from "../../../model/boardGame";
 
 @Component({
   selector: "boardgamedetail",
@@ -14,7 +14,7 @@ import {Boardgame} from "../../../model/boardgame";
 })
 export class BoardGameDetailComponent implements OnInit {
   boardGameId!: number;
-  boardgame: Boardgame | undefined;
+  boardGame: BoardGame | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,7 +25,7 @@ export class BoardGameDetailComponent implements OnInit {
   ngOnInit() {
     this.boardGameId = Number(this.route.snapshot.paramMap.get("id"));
     this.boardGameService.findOne(this.boardGameId).subscribe(data => {
-      this.boardgame = data;
+      this.boardGame = data;
     });
   }
 }
