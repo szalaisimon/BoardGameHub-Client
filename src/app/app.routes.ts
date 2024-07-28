@@ -10,5 +10,10 @@ export const routes: Routes = [
     path: "boardgames",
     pathMatch: "full",
     loadComponent: () => import("./components/navbar/boardgames/boardgames.component").then(m => m.BoardgamesComponent)
+  },
+  {
+    path: "users",
+    pathMatch: "full",
+    loadComponent: () => import("./components/navbar/users/users.component").then(m => m.UsersComponent)
   }
 ];
