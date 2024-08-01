@@ -1,0 +1,38 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.board-game-table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.board-game-table th,
+.board-game-table td {
+  border: 1px solid rgb(244, 229, 193);
+  padding: 8px;
+  text-align: center;
+}
+
+.board-game-table td {
+  height: 50px;
+}
+
+.board-game-table th {
+  height: 50px;
+  font-weight: bold;
+  color: rgb(223 104 39);
+}
+
+.board-game-name{
+  color:orange;
+}
+
+.board-game-name:hover{
+  color: rgb(244, 229, 193);
+  cursor: pointer;
+}
+

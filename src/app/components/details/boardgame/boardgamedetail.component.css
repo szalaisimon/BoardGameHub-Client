@@ -1,0 +1,25 @@
+.no-board-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.board-game-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+  border: double rgb(244, 229, 193);
+  border-width: 8px;
+  padding: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board-game-details div {
+  display: block;
+  margin-bottom: 10px;
+}

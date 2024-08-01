@@ -1,0 +1,13 @@
+<div class="board-game-container">
+  <div class="board-game-details" *ngIf="boardGame; else noBoardGame">
+    <div>Name: {{boardGame.name}}</div>
+    <div>Category: {{boardGame.category | boardGameCategory}}</div>
+    <div>Rating: {{boardGame.rating}}</div>
+    <div>Number of votes: {{boardGame.numberOfVotes}}</div>
+    <div>Player number: {{boardGame.minPlayer}} - {{boardGame.maxPlayer}}</div>
+    <div>Age: {{boardGame.minAge}}+</div>
+  </div>
+  <ng-template #noBoardGame>
+    <div class="no-board-game">Error! Board game not found!</div>
+  </ng-template>
+</div>
