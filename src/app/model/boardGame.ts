@@ -8,6 +8,7 @@ export class BoardGame {
   name: string;
   numberOfVotes: number;
   rating: number;
+  picture: string;
 
   constructor(
     id: string,
@@ -18,7 +19,8 @@ export class BoardGame {
     minAge: number,
     name: string,
     numberOfVotes: number,
-    rating: number
+    rating: number,
+    picture: string
   ) {
     this.id = id;
     this.category = category;
@@ -29,5 +31,6 @@ export class BoardGame {
     this.name = name;
     this.numberOfVotes = numberOfVotes;
     this.rating = rating;
+    this.picture=picture;
   }
 }
