@@ -37,13 +37,13 @@
 }
 
 .navbar-element button.navbar-element-active {
-  background-color: rgb(223, 104, 39); /* Narancssárga háttérszín aktív állapotban */
+  background-color: rgb(223, 104, 39);
   outline: 0;
   color: white;
 }
 
 .navbar-element button.navbar-element-inactive:hover {
   outline: 0;
-  color: rgb(223, 104, 39); /* Fehér szöveg hover esetén */
+  color: rgb(223, 104, 39);
 }
 

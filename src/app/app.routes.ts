@@ -19,5 +19,13 @@ export const routes: Routes = [
   {
     path: "boardgames/:id",
     loadComponent: () => import("./components/details/boardgame/boardgamedetail.component").then(m => m.BoardGameDetailComponent)
+  },
+  {
+    path: "registration",
+    loadComponent: () => import("./components/navbar/registration/registration.component").then(m => m.RegistrationComponent)
+  },
+  {
+    path: "login",
+    loadComponent: () => import("./components/navbar/login/login.component").then(m => m.LoginComponent)
   }
 ];

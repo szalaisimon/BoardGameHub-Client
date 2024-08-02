@@ -17,7 +17,9 @@ export class NavbarComponent {
   navItems: NavItem[] = [
     new NavItem("Home", false, "home"),
     new NavItem("BoardGames", false, "boardgames"),
-    new NavItem("Users", false, "users")
+    new NavItem("Users", false, "users"),
+    new NavItem("Register", false, "registration"),
+    new NavItem("Login", false, "login")
   ];
 
   activateNavElement(selectedNavItem: NavItem): void {

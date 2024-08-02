@@ -5,7 +5,7 @@ export class User {
   password: string;
   role: string;
   username: string;
-  favorite_board_game_id?: string;
+  token!: string;
 
   constructor(
     id: string,
@@ -14,7 +14,6 @@ export class User {
     password: string,
     role: string,
     username: string,
-    favorite_board_game_id?: string
   ) {
     this.id = id;
     this.firstName = firstName;
@@ -22,6 +21,5 @@ export class User {
     this.password = password;
     this.role = role;
     this.username = username;
-    this.favorite_board_game_id = favorite_board_game_id;
   }
 }
