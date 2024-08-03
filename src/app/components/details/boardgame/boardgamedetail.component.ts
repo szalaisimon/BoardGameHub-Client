@@ -5,6 +5,7 @@ import {CommonModule} from "@angular/common";
 import {BoardGameService} from "../../../services/boardgame.service";
 import {BoardGame} from "../../../model/boardGame";
 import {ApplicationPipesModule} from "../../shared/pipe/application-pipes.module";
+import {Review} from "../../../model/review";
 
 @Component({
   selector: "boardgamedetail",
@@ -16,6 +17,10 @@ import {ApplicationPipesModule} from "../../shared/pipe/application-pipes.module
 export class BoardGameDetailComponent implements OnInit {
   boardGameId!: number;
   boardGame: BoardGame | undefined;
+  reviews: Review[] = [];
+  reviewStarNumber : number = 10;
+  stars: any[] = [];
+  hoveredIndex = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,5 +33,19 @@ export class BoardGameDetailComponent implements OnInit {
     this.boardGameService.findOne(this.boardGameId).subscribe(data => {
       this.boardGame = data;
     });
+    this.boardGameService.getReviews(this.boardGameId).subscribe(data => {
+      this.reviews = data;
+    });
+    this.stars = Array(this.reviewStarNumber).fill(0);
+  }
+
+  onMouseOver(index: number): void {
+    this.hoveredIndex = index + 1;
+
+    //console.log('Hover index:', this.hoveredIndex);
+  }
+
+  onMouseLeave(): void {
+    this.hoveredIndex = 0;
   }
 }

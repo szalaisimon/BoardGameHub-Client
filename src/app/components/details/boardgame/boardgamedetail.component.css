@@ -7,19 +7,92 @@
 
 .board-game-details {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin-top: 20px;
   font-size: 20px;
-  border: double rgb(244, 229, 193);
-  border-width: 8px;
+  border: solid rgb(244, 229, 193);
+  border-width: 2px;
+  border-radius: 20px;
   padding: 20px;
-  width: 40%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.board-game-details div {
-  display: block;
-  margin-bottom: 10px;
+.board-game-details-name{
+  color: orange;
+  font-size: 40px;
+  justify-content: center;
+  display: flex;
 }
+
+.board-game-details-other div{
+  margin-bottom: 20px;
+}
+
+.board-game-details-left, .board-game-details-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-game-details-left {
+  flex: 1;
+  text-align: left;
+}
+
+.board-game-details-right {
+  flex: 2;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.board-game-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.review-container {
+  background: rgb(244, 229, 193);
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  height: 50px;
+  width: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+  margin-left: auto;
+}
+
+.board-game-details-stars{
+  display: flex;
+}
+.star-icon {
+  transition: fill 0.3s, stroke 0.3s;
+  fill: rgb(62, 62, 62);
+  stroke: rgb(255, 155, 0);
+  margin-right: 5px;
+}
+
+.star-icon.filled {
+  fill: rgb(255, 155, 0);
+}
+
+
