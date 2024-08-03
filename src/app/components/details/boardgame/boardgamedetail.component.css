@@ -30,21 +30,47 @@
   margin-bottom: 20px;
 }
 
+
 .board-game-details-left, .board-game-details-right {
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
 }
 
 .board-game-details-left {
   flex: 1;
   text-align: left;
+  justify-content: right;
 }
 
 .board-game-details-right {
   flex: 2;
   text-align: left;
   padding-left: 20px;
+  justify-content: left;
 }
+
+.review-other-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.left .review-other-container {
+  justify-content: flex-start;
+}
+
+.right .review-other-container {
+  justify-content: flex-end;
+}
+
+.review-other-container div{
+  margin-right: 10px;
+}
+
+.review-other-date{
+  color: #3c5ab4;
+}
+
 
 .board-game-image {
   max-width: 100%;
@@ -55,14 +81,17 @@
   background: rgb(244, 229, 193);
   color: black;
   border-radius: 20px;
-  padding: 10px;
-  height: 50px;
+  padding: 25px;
+  height: 100%;
   width: 40%;
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 2%;
-  display: flex;
   flex-wrap: wrap;
+}
+
+.review-other-name{
+  font-weight: bold;
 }
 
 .review-h1 {

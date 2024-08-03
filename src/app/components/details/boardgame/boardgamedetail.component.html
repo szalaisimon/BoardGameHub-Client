@@ -20,7 +20,7 @@
             [ngClass]="{'filled': i < hoveredIndex}"
             (mouseover)="onMouseOver(i)"
             (mouseleave)="onMouseLeave()"
-            height="20px" width="20px"
+            height="30px" width="30px"
             version="1.1" id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,8 +37,14 @@
   <h1 class="review-h1">Reviews</h1>
   <div class="reviews-container">
     <div class="review-container" *ngFor="let review of reviews; let i = index" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
-      <div>Date: {{review.date}}</div>
-      <div>Content: {{review.content}}</div>
+      <!-- TODO: Megcsinálni hogy a bejelentkezett felhasználó nevét írja ki -->
+      <div class="review-other-container">
+        <div class="review-other-name" >Szalai Simon</div>
+        <div class="review-other-date">{{review.date | formatDatePipe}}</div>
+      </div>
+      <div class="review-content-container">
+        <div>{{review.content}}</div>
+      </div>
     </div>
   </div>
 </div>
